@@ -1,0 +1,20 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BE33028F4704004FB4B0EE8EB33C67D6/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BE33028F4704004FB4B0EE8EB33C67D6/Shortcut/@EntryValue">dprop</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BE33028F4704004FB4B0EE8EB33C67D6/Text/@EntryValue">private $TYPE$ $NAME1$;&#xD;
+public $TYPE$ $NAME2$ { get =&gt; $NAME1$; set { $NAME1$ = value; OnPropertyChanged(); }}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BE33028F4704004FB4B0EE8EB33C67D6/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BE33028F4704004FB4B0EE8EB33C67D6/Categories/=Imported_002017_002F08_002F2021/@EntryIndexedValue">Imported 17/08/2021</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BE33028F4704004FB4B0EE8EB33C67D6/Categories/=Imported_002017_002D08_002D2021/@EntryIndexedValue">Imported 17-08-2021</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BE33028F4704004FB4B0EE8EB33C67D6/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BE33028F4704004FB4B0EE8EB33C67D6/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BE33028F4704004FB4B0EE8EB33C67D6/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BE33028F4704004FB4B0EE8EB33C67D6/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BE33028F4704004FB4B0EE8EB33C67D6/Field/=TYPE/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BE33028F4704004FB4B0EE8EB33C67D6/Field/=TYPE/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BE33028F4704004FB4B0EE8EB33C67D6/Field/=NAME1/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BE33028F4704004FB4B0EE8EB33C67D6/Field/=NAME1/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BE33028F4704004FB4B0EE8EB33C67D6/Field/=NAME2/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BE33028F4704004FB4B0EE8EB33C67D6/Field/=NAME2/Expression/@EntryValue">capitalize(NAME1)</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BE33028F4704004FB4B0EE8EB33C67D6/Field/=NAME2/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BE33028F4704004FB4B0EE8EB33C67D6/Field/=NAME2/Order/@EntryValue">2</s:Int64></wpf:ResourceDictionary>
