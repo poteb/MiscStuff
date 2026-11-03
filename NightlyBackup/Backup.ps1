@@ -34,6 +34,8 @@ $entries = Get-Content $FolderList -ErrorAction Stop |
 if (-not $entries) { Write-Output "No folders in $FolderList - nothing to do."; exit 0 }
 
 $stamp = Get-Date -Format 'yyyy-MM-dd_HHmm'
+$utf8  = New-Object Text.UTF8Encoding $false   # UTF-8 without BOM
+function Write-Log($path, $text) { [IO.File]::AppendAllText($path, $text, $utf8) }
 
 foreach ($key in $targets.Keys) {
     $t       = $targets[$key]
@@ -49,17 +51,22 @@ foreach ($key in $targets.Keys) {
 
     foreach ($src in $folders) {
         if (-not (Test-Path -LiteralPath $src -PathType Container)) {
-            "!! Source missing, skipped: $src" | Add-Content $log
+            Write-Log $log "!! Source missing, skipped: $src`r`n"
             $failed = $true; continue
         }
         # D:\Photos\2024 -> <root>\D\Photos\2024
         $full = (Resolve-Path -LiteralPath $src).ProviderPath.TrimEnd('\')
         $dest = Join-Path $t.Root ($full -replace '^([A-Za-z]):', '$1')
 
+        # robocopy can only write Unicode logs as UTF-16; log to temp, append to main log as UTF-8
+        $tmp = [IO.Path]::GetTempFileName()
         robocopy $full $dest $t.Mode /COPY:DAT /DCOPY:DAT /MT:8 /R:2 /W:5 /XJ /NP /NDL `
-            /XD '$RECYCLE.BIN' 'System Volume Information' /UNILOG+:$log | Out-Null
-        if ($LASTEXITCODE -ge 8) {
-            "!! robocopy exit $LASTEXITCODE for $full -> $dest" | Add-Content $log
+            /XD '$RECYCLE.BIN' 'System Volume Information' /UNILOG:$tmp | Out-Null
+        $rc = $LASTEXITCODE
+        Write-Log $log ([IO.File]::ReadAllText($tmp, [Text.Encoding]::Unicode))
+        Remove-Item $tmp -Force
+        if ($rc -ge 8) {
+            Write-Log $log "!! robocopy exit $rc for $full -> $dest`r`n"
             $failed = $true
         }
     }
