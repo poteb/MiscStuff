@@ -1,0 +1,9 @@
+# One folder per line. Lines starting with # are ignored.
+# Plain path        -> E (mirror) and F (additive)
+# path | E          -> E only (mirror)
+# path | F          -> F only (additive)
+
+D:\3D
+D:\3dBox
+D:\Upload | E
+C:\Users\paw\Downloads | E
